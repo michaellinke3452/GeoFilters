@@ -223,7 +223,7 @@ class Filter:
     
 
     """
-    The following functions are implementations of the equations 4 - 28 in: 
+    The following functions with numbers in brackets are implementations of the equations 4 - 28 in: 
     Florinsky, I. V. (2017). An illustrated introduction to general geomorphometry. Progress in Physical Geography, 41(6), 723-752.
     The numbers in brackets refer to the equation number in the article.
     """
@@ -433,6 +433,9 @@ class Filter:
         I = 50 * ( 1 + np.sign(  sin(e) - cos(e) * (p*sin(a) + q*cos(a)))) 
         I *= ((sin(e) - cos(e) * (p*sin(a) + q*cos(a)))  /  (np.sqrt(1 + p**2 + q**2))) 
         return np.nan_to_num(I)   
+
+
+    """The following filters are experimental stuff that should be used with caution."""
 
 
     def nabla(self):  
